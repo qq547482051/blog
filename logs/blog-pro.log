@@ -1,5 +1,0 @@
-2020-01-16 11:04:21.423  INFO 7240 --- [restartedMain] cool.lym.blog.BlogApplication            : Starting BlogApplication on DESKTOP-ULDH6R5 with PID 7240 (D:\Repositories\blogs\target\classes started by 610 in D:\Repositories\blogs)
-2020-01-16 11:04:21.425  INFO 7240 --- [restartedMain] cool.lym.blog.BlogApplication            : The following profiles are active: pro
-2020-01-16 11:04:23.282  WARN 7240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-01-16 11:04:23.433  WARN 7240 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-01-16 11:04:23.524  INFO 7240 --- [restartedMain] cool.lym.blog.BlogApplication            : Started BlogApplication in 2.331 seconds (JVM running for 3.093)
