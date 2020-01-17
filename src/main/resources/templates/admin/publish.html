@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Publish</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+  <link rel="stylesheet" href="../../static/css/blog.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="ui inverted  attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui stackable container secondary inverted menu">
+      <h1 class="ui  header item">Blog&nbsp;&nbsp;Publish</h1>
+      <a class="active item" href="#"><i class="home icon"></i> Blog</a>
+      <a class="item" href="#"><i class="list layout icon"></i> Category</a>
+      <a class="item" href="#"><i class="tags icon"></i> Tags</a>
+      <div class="menu">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="right menu ">
+        <div class="ui dropdown item">
+          <div class="text">
+            <img src="https://i.picsum.photos/id/1021/100/100.jpg" alt="" class="ui avatar image">
+            610
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item"><i class="sign out icon"></i> Sign out</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 正文栏 -->
+  <div class="m-container-small m-padded-tb-massive ">
+    <div class="ui container">
+      <form class="ui form">
+        <h4 class="ui dividing header">Blog Information</h4>
+
+        <div class="required field">
+          <label>Title</label>
+          <div class="ui left labeled input">
+            <div class="ui selection compact basic black dropdown label">
+              <input type="hidden" value="Original">
+              <i class="dropdown icon"></i>
+              <div class="text">Original</div>
+              <div class="menu">
+                <div class="item" data-value="Original">Original</div>
+                <div class="item" data-value="Reproduced">Reproduced</div>
+                <div class="item" data-value="Translation">Translation</div>
+              </div>
+            </div>
+            <input type="text" name="title" placeholder="Title">
+          </div>
+        </div>
+        <div class="required field">
+          <label>Content</label>
+          <div id="md-content" style="z-index: 1 !important;">
+            <textarea name="content" style="display: none;"></textarea>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Type</label>
+            <div class="ui left labeled action input">
+              <label class="ui compact basic label">Type</label>
+              <div class="ui fluid selection dropdown">
+                <input type="hidden" name="type">
+                <i class="dropdown icon"></i>
+                <div class="default text">Types</div>
+                <div class="menu">
+                  <div class="item" data-value="1">Error Log</div>
+                  <div class="item" data-value="2">Developer Handbook</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Tag</label>
+            <div class="ui left labeled action input">
+              <label class="ui compact basic label">Tag</label>
+              <div class="ui fluid selection multiple search dropdown">
+                <input type="hidden" name="tag">
+                <i class="dropdown icon"></i>
+                <div class="default text">Tags</div>
+                <div class="menu">
+                  <div class="item" data-value="1">Error Log</div>
+                  <div class="item" data-value="2">Developer Handbook</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="required field">
+          <label>Image Reference Link</label>
+          <div class="ui left labeled input">  
+            <div class="ui selection compact basic black dropdown label">
+              <input type="hidden" value="Original">
+              <i class="dropdown icon"></i>
+              <div class="text">https://</div>
+              <div class="menu">
+                <div class="item" data-value="https://">https://</div>
+                <div class="item" data-value="http://">http://</div>
+                <div class="item" data-value="file://">file:///</div>
+              </div>
+            </div>
+            <input type="text" name="image" placeholder="...">
+          </div>
+        </div>
+        <h4 class="ui top attached header">Other Settings</h4>
+        <div class="ui bottom attached segment">
+          <div class="grouped fields">
+            <label for="alone">Would you like to recommend this article?</label>
+            <div class="field">
+              <div class="ui radio checkbox checked">
+                <input type="radio" checked="" name="yes">
+                <label>Yes</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="no">
+                <label>No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui error message"></div>
+
+        <div class="ui container">
+          <button class="ui right floated primary labeled icon button">
+            <i class="add icon"></i> Publish
+          </button>
+          <button class="ui right floated labeled icon button" type="button" onclick="window.history.go(-1)">
+            <i class="reply icon"></i> Return
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- 页尾栏 -->
+  <footer class="ui inverted attached segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+      <div class="ui inverted divided stackable grid">
+        <div class="three wide column">
+          <div class="item m-padded-left-image">
+            <img src="../../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 120px;">
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Latest blog</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">A</a>
+            <a href="#" class="item">B</a>
+            <a href="#" class="item">C</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Contack details</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item"><i class="qq icon"></i>547482051</a>
+            <a href="#" class="item"><i class="mail icon"></i>liu9634@126.com</a>
+            <a href="https://github.com/qq547482051" class="item"><i class="github icon"></i>github.com/qq547482051</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Info</h4>
+          <p class="m-opacity-mini">This is my first Blog</p>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <p class="m-opacity-mini m-text-spaced">Copy right © 2019 610-Blog Designed by 610</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="../../static/lib/editormd/editormd.min.js"></script>
+  <script>
+    //markdown插件初始化
+    var contentEditor;
+
+$(function() {
+  contentEditor = editormd("md-content", {
+        width   : "100%",
+        height  : 550,
+        syncScrolling : "single",
+        path    : "../../static/lib/editormd/lib/"
+    });
+    
+});
+    $('.ui.dropdown').dropdown();
+    $('.ui.checkbox').checkbox();
+    $('.ui.form').form(
+      {
+        fields: {
+          title: {
+            identifie: 'title',
+            rules: [{
+              type: 'empty',
+              prompt: 'Please enter your title'
+            }]
+          },
+          image: {
+            identifie: 'image',
+            rules: [{
+              type: 'empty',
+              prompt: 'Please enter your image link'
+            }]
+          },
+          content: {
+            identifie: 'content',
+            rules: [{
+              type: 'empty',
+              prompt: 'Please enter your content'
+            }]
+          }
+        }
+      }
+    );
+  </script>
+</body>
+
+</html>

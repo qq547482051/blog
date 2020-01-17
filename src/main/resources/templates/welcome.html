@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  
+<div class="landing-page">
+    <div class="page-content">
+        <h1>WELCOME TO MY BLOG</h1>
+        <p id="show">
+        </p>
+        <a href="#">Get started</a>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    var str = "I AM CODING , AND U ?";
+    var len = str.length;
+    var i = 1;
+    function showword() {
+        document.getElementById("show").innerHTML = str.substr(0, i);
+        i++;
+        if (i > len) {
+            clearInterval("done");
+        }
+    }
+    var done = setInterval("showword()", 150);
+</script>
+</html>
