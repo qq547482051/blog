@@ -1,6 +1,5 @@
-package cool.lym.blog.web;
+package cool.lym.blog.controller;
 
-import cool.lym.blog.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
