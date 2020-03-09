@@ -1,34 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head th:replace="_fragments :: head(~{::title})">
     <title>Category</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <link rel="stylesheet" href="css/blog.css">
 </head>
 
 <body>
-    <!-- 导航栏 -->
-    <nav class="ui inverted  attached segment m-padded-tb-mini m-shadow-small">
-        <div class="ui stackable container secondary inverted menu">
-            <h1 class="ui  header item">Blog</h1>
-            <a class="item" href="#"><i class="home icon"></i> Home</a>
-            <a class="item active" href="#"><i class="list layout icon"></i> Category</a>
-            <a class="item" href="#"><i class="tags icon"></i> Tags</a>
-            <a class="item" href="#"><i class="archive icon"></i> Archive</a>
-            <a class="item" href="#"><i class="info icon"></i> Info</a>
-            <div class="right menu">
-                <div class="item">
-                    <div class="ui icon input">
-                        <input type="text" placeholder="Search...">
-                        <i class="search link icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+<!-- 导航栏 -->
+<nav th:replace="_fragments :: menu(2)" >
+</nav>
 
     <!-- 正文栏 -->
     <div class="m-container-small m-padded-tb-massive ">
@@ -217,41 +197,9 @@
         </div>
     </div>
 
-    <!-- 页尾栏 -->
-    <footer class="ui inverted attached segment m-padded-tb-massive">
-        <div class="ui center aligned container">
-            <div class="ui inverted divided stackable grid">
-                <div class="three wide column">
-                    <div class="item m-padded-left-image">
-                        <img src="images/wechat.jpg" class="ui rounded image" alt="" style="width: 120px;">
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Latest blog</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">A</a>
-                        <a href="#" class="item">B</a>
-                        <a href="#" class="item">C</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Contack details</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item"><i class="qq icon"></i>547482051</a>
-                        <a href="#" class="item"><i class="mail icon"></i>liu9634@126.com</a>
-                        <a href="https://github.com/qq547482051" class="item"><i
-                                class="github icon"></i>github.com/qq547482051</a>
-                    </div>
-                </div>
-                <div class="seven wide column">
-                    <h4 class="ui inverted header">Info</h4>
-                    <p class="m-opacity-mini">This is my first Blog</p>
-                </div>
-            </div>
-            <div class="ui inverted section divider"></div>
-            <p class="m-opacity-mini m-text-spaced">Copy right © 2019 610-Blog Designed by 610</p>
-        </div>
-    </footer>
+<!-- 页尾栏 -->
+<footer th:replace="_fragments :: footer" >
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
